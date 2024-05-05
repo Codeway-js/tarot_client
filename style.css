@@ -1,0 +1,426 @@
+:root {
+    --bg-color-player : rgb(0, 100, 0);
+    --radius : 5px;
+}
+body {
+    background-color: rgb(19, 158, 26);
+    overflow-x: hidden;
+}
+
+@keyframes horizontal-shaking {
+    0% {
+        transform: translateX(0)
+    }
+
+    25% {
+        transform: translateX(2px)
+    }
+
+    50% {
+        transform: translateX(-2px)
+    }
+
+    75% {
+        transform: translateX(2px)
+    }
+
+    100% {
+        transform: translateX(0)
+    }
+}
+
+#topplayer {
+    position: absolute;
+    color: red;
+    top: 10px;
+    left: 20%;
+    height: 20%;
+    background-color: var(--bg-color-player);
+}
+
+#leftplayer {
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    left: 30px;
+    color: green;
+    background-color: var(--bg-color-player);
+    rotate: 90deg;
+}
+
+#rightplayer {
+    position: absolute;
+    top: 40%;
+    height: 20%;
+    right: 30px;
+    rotate: 90deg;
+    color: white;
+    background-color: var(--bg-color-player);
+}
+
+/* #bottomplayer {
+    position: absolute;
+    color: blue;
+    bottom: 14px;
+    left: 5%;
+    width: 90%;
+    min-height: 15%;
+    max-height: 30%;
+    background-color: blue;
+} */
+#bottomplayer img {
+    width: 4%;
+    margin-left: 10px;
+}
+
+img {
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+img.shake {
+    animation: horizontal-shaking 0.2s 1 forwards;
+}
+
+
+#play {
+    position: absolute;
+    left: 30%;
+    top: 40%;
+    display: flex;
+    background-color: var(--bg-color-player);
+    justify-content: space-between;
+    width: 40%;
+}
+
+#play img {
+    height: 100%;
+    max-width: 100%;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+.c1 img {
+    width: 100%;
+}
+
+.c1 {
+    width: 12%;
+}
+
+
+.ltrue {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: grayscale();
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.btn {
+    font-family: Roboto, sans-serif;
+    font-weight: 0;
+    font-size: 1.5em;
+    color: #fff;
+    background-color: #000000;
+    padding: 10px 30px;
+    border: solid #25a4d6 0px;
+    box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+#bplay {
+    position: absolute;
+    left: 80%;
+    top: 5%;
+}
+#benchere{
+    position: absolute;
+    left: 80%;
+    top: 15%;
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #0a0a0a;
+    border: solid 0px #0066cc;
+
+}
+/* #info {
+    position: absolute;
+    background-color: purple;
+    width: 35%;
+    left: 30%;
+    top: 10px;
+    font-size: 1em;
+    font-family: Roboto, sans-serif;
+    padding-left: 10px;
+} */
+
+
+
+
+
+/* Animation */
+
+#move{
+    display: none;
+    position: absolute;
+    height: 20%;
+}
+
+
+@keyframes lefttoplay{
+    to {
+        left: 30%;
+        rotate:0deg;
+    }
+}
+@keyframes righttoplay{
+    to {
+        right: 30%;
+        rotate:0deg;
+    }
+}
+@keyframes bottomtoplay{
+    to{
+        bottom: 40%;
+    }
+}
+@keyframes toptoplay{
+    to{
+        top: 40%;
+        left: 30%;
+        rotate: 180deg;
+    }
+}
+@keyframes leftwinp1{
+    0% {
+        top:40%;
+        left:10%
+    }
+    100%{
+        top:40%;
+        left: 2%;
+    }
+}
+@keyframes righttwinp1{
+    0% {
+        top:40%;
+        left:10%
+    }
+    100%{
+        top:40%;
+        left: 86%;
+    }
+}
+@keyframes leftwinp2{
+    0% {
+        top:40%;
+        left:30%
+    }
+    100%{
+        top:40%;
+        left: 2%;
+    }
+}
+@keyframes righttwinp2{
+    0% {
+        top:40%;
+        left:30%
+    }
+    100%{
+        top:40%;
+        left: 86%;
+    }
+}
+@keyframes leftwinp3{
+    0% {
+        top:40%;
+        left:50%
+    }
+    100%{
+        top:40%;
+        left: 2%;
+    }
+}
+@keyframes righttwinp3{
+    0% {
+        top:40%;
+        left:50%
+    }
+    100%{
+        top:40%;
+        left: 86%;
+    }
+}
+@keyframes leftwinp4{
+    0% {
+        top:40%;
+        left:70%
+    }
+    100%{
+        top:40%;
+        left: 2%;
+    }
+}
+@keyframes righttwinp4{
+    0% {
+        top:40%;
+        left:2%
+    }
+    100%{
+        top:40%;
+        left: 86%;
+    }
+}
+#move.righttoplay {
+    display: block;
+    top: 40%;
+    right: 30px;
+    rotate: 90deg;
+    animation: 1.5s ease-out forwards righttoplay;
+}
+#move.lefttoplay {
+    display: block;
+    top: 40%;
+    left: 30px;
+    rotate: 90deg;
+    animation: 1.5s ease-out forwards lefttoplay;
+}
+
+#move.bottomtoplay {
+    display: block;
+    bottom: 10%;
+    left: 45%;
+    animation: 0.2s ease-out forwards bottomtoplay;
+}
+#move.toptoplay {
+    display: block;
+    top: 30px;
+    left: 20%;
+    animation: 1.5s ease-out forwards toptoplay;
+}
+
+
+
+.c1.righttwinp1{
+    position: absolute;
+    animation: ease-in forwards 1.2s righttwinp1 ;
+}
+.c1.righttwinp2{
+    position: absolute;
+    animation: ease-in forwards 1.2s righttwinp2 ;
+}
+.c1.righttwinp3{
+    position: absolute;
+    animation: ease-in forwards 1.2s righttwinp3 ;
+}
+.c1.righttwinp4{
+    position: absolute;
+    animation: ease-in forwards 1.2s righttwinp4 ;
+}
+.leftwinp1 {
+    position:absolute;
+    animation: ease-out forwards 1.2s leftwinp1;
+} 
+.leftwinp2 {
+    position:absolute;
+    animation: ease-out forwards 1.2s leftwinp2;
+}
+.leftwinp3 {
+    position:absolute;
+    animation: ease-out forwards 1.2s leftwinp3;
+}
+.leftwinp4 {
+    position:absolute;
+    animation: ease-out forwards 1.2s leftwinp4;
+}
+
+.win {
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgb(255, 176, 18);
+} 
+
+
+#topname {
+    position: absolute;
+    width: 10%;
+    text-align: right;
+    left: 9%;
+    top: 2%;
+    overflow-wrap:anywhere;
+}
+
+#leftname {
+    position: absolute;
+    width: 10%;
+    left: 0%;
+    text-align: center;
+    height: 5%;
+    top: 35%;
+    overflow:hidden;
+}
+
+#rightname {
+    position: absolute;
+    width: 10%;
+    right: 0%;
+    text-align: center;
+    height: 5%;
+    top: 35%;
+    overflow:hidden;
+}
+
+#bottomname {
+    position: absolute;
+    width: 10%;
+    left:9%;
+    bottom: 15%;
+    text-align: right;
+    overflow: hidden;
+}
+:root {
+    --bg-color-player : rgb(0, 100, 0);
+    --radius : 5px;
+}
+
+#bottomplayer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 14px;
+    left: 5%;
+    width: 90%;
+    min-height: 15%;
+    max-height: 30%;
+    background-color: var(--bg-color-player);
+    border-radius: var(--radius);
+}
+
+body {
+    font: 1em arial;
+}
+
+#info {
+    position: absolute;
+    background-color: var(--bg-color-player);
+    width: 35%;
+    left: 30%;
+    top: 10px;
+    font-size: 1em;
+    /* font-family: Roboto, sans-serif; */
+    padding-left: 10px;
+    border-radius: var(--radius);
+}

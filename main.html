@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeu de Tarot</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="topplayer">
+        <img src="./back.png" alt="" onclick="oncarteclick(this)" class="ltrue">
+    </div>
+    <div id="leftplayer">
+        <img src="./back.png" alt="" onclick="oncarteclick(this)" class="ltrue"></div>
+    <div id="rightplayer">
+        <img src="./back.png" alt="" onclick="oncarteclick(this)" class="ltrue">
+    </div>
+    <div id="bottomplayer">
+
+
+    </div>
+    <div id="play">
+        <div class="c1 " id="c1">
+        </div>
+        <div class="c1 " id="p1">
+        </div>
+        <div class="c1 " id="p2">
+            
+        </div>
+        <div class="c1" id="p3">
+        </div>
+        <div class="c1 " id="p4">
+
+        </div>
+        <div class="c1 " id="c2">
+        </div>
+    </div>
+    <div id="info">
+        <p id="lvlench"> Niveau de l'enchère : </p>
+        <p id="infotour">Au tour de </p> 
+        <p id="gprec">Gagnant du tour précédent : </p>
+        
+    </div>
+    <button class="btn" id="bplay" onclick="play()">Enchérir</button>
+    <button class="btn" id="benchere"onclick="pench()">Ne pas enchérir</button>
+    <div id="move">
+        <img src="./back.png" alt="the moving image" class="ltrue">
+    </div>
+    <script src="intercarte.js"></script>
+    <script src="index.js"></script>
+    <script src="./testws.js"></script>
+    <p id="topname">kwaku</p>
+    <p id="leftname">kwako</p>
+    <p id="rightname">kwaki</p>
+    <p id="bottomname">kwake</p>
+</body>
+
+</html>
